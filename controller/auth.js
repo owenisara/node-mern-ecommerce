@@ -47,7 +47,7 @@ exports.login = async(req,res)=>{
             //Generate Token
             jwt.sign(payload,
                 'jwtSecret',
-                {expiresIn:3600},
+                {expiresIn:10800},
                 (err,token)=>{
                 if(err)throw err;
                 
